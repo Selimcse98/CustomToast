@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        final View toastView = getLayoutInflater().inflate(R.layout.custom_toast,null);
         Button button = (Button) findViewById(R.id.toast_button);
         button.setOnClickListener(new View.OnClickListener() {
 
@@ -26,8 +25,7 @@ public class MainActivity extends AppCompatActivity {
                 toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
                 toast.setDuration(Toast.LENGTH_LONG);
 
-                //toast.setView(getLayoutInflater().inflate(R.layout.custom_toast,null));
-                toast.setView(toastView);
+                toast.setView(getLayoutInflater().inflate(R.layout.custom_toast,null));
 
                 toast.show();
             }

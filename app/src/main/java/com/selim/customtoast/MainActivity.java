@@ -14,8 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        //final View toastView = getLayoutInflater().inflate(R.layout.custom_toast,null);
-        final View toastView = findViewById(R.id.toast_layout_root);
+        final View toastView = getLayoutInflater().inflate(R.layout.custom_toast,null);
         Button button = (Button) findViewById(R.id.toast_button);
         button.setOnClickListener(new View.OnClickListener() {
 
